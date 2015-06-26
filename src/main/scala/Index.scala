@@ -14,9 +14,6 @@ object Index {
     val path: Path = Path(dirName)
     if (path.exists) {
       path.deleteRecursively()
-      println("Dir exists")
-    } else {
-      println("Dir not exists")
     }
 
     val df = sqlContext.read.format("com.databricks.spark.csv")
